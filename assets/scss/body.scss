@@ -1,0 +1,12 @@
+@import 'headings';
+
+// Variables
+$fond: #222;
+$texte: #AAA;
+
+$base_color: #48A3E9;
+
+body{
+  background-color: $fond;
+  color: $texte;
+}
