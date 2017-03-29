@@ -1,5 +1,5 @@
-#SASS pour : Syntactically Awesome Style Sheets   
-SASS pour le nom langage et scss pour le format qu'on utilise, vous pourrez aussi croisé des fichiers avec l'extension .sass qui sont l'ancien format.  
+# SASS pour : Syntactically Awesome Style Sheets   
+SASS est le nom du langage et scss pour le format qu'on utilise, vous pourrez aussi croisé des fichiers avec l'extension .sass, qui sont l'ancien format.  
 
 - Comparaison du code SASS / SCSS   
 La différence : l'indentation pour le SASS et les accolades pour SCSS  
@@ -15,13 +15,13 @@ sudo apt install ruby
 sudo gem install sass
 ```
 
-Vous trouverez dans ce dépot :  
+Vous trouverez dans ce dépot un exemple de projet SASS:  
 
 - Créer un répertoire assets/scss et assets/css  
 
-Ne créez rien dans assets/css, c'est la commande sass qui va les crées pour vous à partir du code mis dans les fichiers scss :  
+Ne créez rien dans assets/css, c'est la commande sass installée plus haut qui va créer les fichiers css pour vous à partir du code scss mis dans vos fichiers scss :  
 
-Essayer les styles ci-dessous en les ajoutant dans les différents fichiers scss rangés et nommées par thématique ainsi afin d'organiser ces CSS. Tous ces fichiers SCSS seront au final réunis en un seul par la commande sass :  
+Essayez: les styles ci-dessous en les ajoutant dans les différents fichiers scss rangés et nommées par thématique ainsi afin d'organiser ces CSS. Tous ces fichiers SCSS seront au final réunis en un seul par la commande sass :  
 Nous allons créer plusieurs feuilles de style partiales :  
 [Exemple de répertoire SCSS](https://github.com/MyClientisRich/WPbaseTheme/tree/master/scss)
 Créer un fichier variables.scss est mettre dedans :  
@@ -51,7 +51,7 @@ ul {
 
 - Compiler et Tester vos fichiers SCSS et linkez le app.css obtenu sur votre index.html  
 
-- Inheritance ( Héritage )  
+- Inheritance ( Héritage )   
 ```
 %box {
     margin: 2px;
@@ -68,6 +68,7 @@ ul {
     background-color: blue;
 }
 ```
+Créez un héritage %box, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos autres classes pour ajouter ces propriétés.
 
 - Les fonctions :  
-Darken et Lighten()
+Comme Darken et Lighten() qui permettent d'assombrir ou d'éclaircir une couleur.  
