@@ -81,5 +81,23 @@ ul {
 ```
 Créez un héritage %box, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos autres classes pour ajouter ces propriétés.
 
+@mixin box($bg-color) {
+    background-color: $bg-color;
+    // this is a predefined sass-function
+    color: complement($bg-color);
+}
+
+--
+$color: red;
+
+@mixin my-border($color) {
+  border: 1px solid $color;
+}
+
+body {
+  background: $color;
+  @include my-border(green);
+}
+
 - Les fonctions :  
 Comme Darken et Lighten() qui permettent d'assombrir ou d'éclaircir une couleur.  
