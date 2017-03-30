@@ -119,4 +119,4 @@ Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec l
 -----
 
 Pour voir une utilisation avancée de SASS, regardez le contenu du fichier \_headings.scss à la racine du projet, il y a des variables, boucles afin de générer des styles...  
-Déplacez le fichier \_headings.scss dans assets/scss/ et importez le dans app.scss pour voir les modifications qui va ajouter à app.css
+Déplacez le fichier \_headings.scss dans assets/scss/ et importez le dans app.scss pour voir les modifications qui va ajouter dans app.css et visionnez le resultat dans index.html
