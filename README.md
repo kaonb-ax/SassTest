@@ -41,26 +41,38 @@ Nous allons créer plusieurs partiels :
 ```
 Créer un fichier assets/scss/_colors.scss est mettre dedans :  
 ```
-Ajoutez ceci dedans  
 ```
 $fond: #222;
 $texte: #AAA;
 
 $base_color: #48A3E9;
 ```
-- Créer un fichier assets/scss/app.scss et importez dedans le fichier colors.scss dedans grâce à:  
+- Créer un fichier assets/scss/app.scss et importez dedans le fichier colors.scss ci-dessus en mettant dedans:  
 ```
-@import nomdufichierSeulement
+@import nomdufichierSansLextensionSCSS
 ```
 Dans app.scss, affectez au body un background en lui affectant la variable $fond comme couleur et comme couleur de police la variable $texte  
 
-- Utilisez la commande ci-dessous pour compiler et tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html pour voir le résultat.
-exemple de commande, lancez la une seule fois dans le terminal, elle observera automatiquement les changements que vous faites dans les fichiers scss et re-créera automatiquement le fichier app.css:
+- Pour voir le résultat de tout cela, utilisez la commande ci-dessous pour compiler et tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html.
+Lancez la commande ci-dessous une seule fois dans le terminal, elle observera automatiquement les changements que vous faites dans les fichiers scss et re-créera automatiquement le fichier de style app.css:
 ```
 sass --watch assets/scss/app.scss:assets/css/app.css --trace --style compressed
 ```
 
-- Nesting ( traduction : Nidification?? par rapport à la structure )
+- Nesting ( traduction : Le fait de nicher des données/éléments dans un.e autre.
+ )
+ exemple :
+ ```
+ a {
+     color: $link_color;
+     &:hover {
+         color: $color_hover;
+     }
+     &:focus {
+         color: $color_focus;
+     }
+}
+```
 ```
 Créer un fichier assets/scss/_liste.scss est mettre dedans :  
 ```
@@ -106,7 +118,6 @@ Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec l
 }
 ```
 
-```
-Pour voir une utilisation avancée de SASS, regardez le contenu du fichier _headings.scss à la racine du projet, il y a des variables, boucles afin de générer des styles...  
-Déplacez le fichier _headings.scss dans assets/scss/ et importez le dans app.scss pour voir les modifications qui va ajouter à app.css
-```
+
+Pour voir une utilisation avancée de SASS, regardez le contenu du fichier \_headings.scss à la racine du projet, il y a des variables, boucles afin de générer des styles...  
+Déplacez le fichier \_headings.scss dans assets/scss/ et importez le dans app.scss pour voir les modifications qui va ajouter à app.css
