@@ -93,10 +93,8 @@ ul {
 
 Pareil pour la liste de box3 ( .listTrois ), couleur du lien en jaune et grise au survol.
 ```
-importez dans app.scss le fichier _liste.scss et testez le style des listes
+importez dans app.scss le fichier _liste.scss et observez le style des liens dans index.html
 ```
-
-Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos classes box1, box2 et box3 pour ajouter ces propriétés automatiquement.
 
 - Inheritance ( Héritage )   
 ```
@@ -116,7 +114,9 @@ Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec l
     background-color: blue;
 }
 ```
+Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos classes box1, box2 et box3 pour ajouter ces propriétés automatiquement.
 
+-----
 
 Pour voir une utilisation avancée de SASS, regardez le contenu du fichier \_headings.scss à la racine du projet, il y a des variables, boucles afin de générer des styles...  
 Déplacez le fichier \_headings.scss dans assets/scss/ et importez le dans app.scss pour voir les modifications qui va ajouter à app.css
