@@ -2,11 +2,11 @@
 
 SASS([site officiel](http://sass-lang.com/guide)) est un langage de feuilles de style en cascade (CSS) qui sera compilé pour obtenir du CSS.  
 
-Permet principalement d'utiliser des variables, permet facilement l'import de fichiers scss dans d'autres fichiers scss et  donc découper et organiser ces styles en plusieurs fichiers qui au final produiront un seul fichier.
+Permet principalement d'utiliser des variables dans vos CSS, permet facilement l'import de fichiers scss dans d'autres fichiers scss et  donc découper et organiser ces styles en plusieurs fichiers pour travailler à plusieurs sur une application qui au final produiront un seul fichier grâce à la commande sass.
 
-Le résultat peut également être compressé en passant une option à la ligne de commande, la plus efficace état compressed  
+Le résultat peut également être compressé en passant une option à la ligne de commande pour avoir une feuille de style plus rapide à charger pour vos visiteurs, les plus efficace étant compressed , compact
 option possible de compression : nested (default), compact, compressed, ou expanded  
- exemple :  
+ exemple pour compresser vos fichiers scss :  
 ̀```
 sass --watch chemin_fichiers_scss chemin_fichiers_css --style compressed
 ̀̀```
