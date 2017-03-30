@@ -52,7 +52,7 @@ $base_color: #48A3E9;
 ```
 Dans app.scss, affectez au body un background en lui affectant la variable $fond comme couleur et comme couleur de police la variable $texte  
 
-- Pour voir le résultat de tout cela, utilisez la commande ci-dessous pour compiler et tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html.
+- Pour voir le résultat de tout cela, utilisez la commande ci-dessous pour compiler et tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu dans index.html.
 Lancez la commande ci-dessous une seule fois dans le terminal, elle observera automatiquement les changements que vous faites dans les fichiers scss et re-créera automatiquement le fichier de style app.css:
 ```
 sass --watch assets/scss/app.scss:assets/css/app.css --trace --style compressed
