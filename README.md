@@ -8,7 +8,7 @@ Le résultat peut également être compressé en passant une option à la ligne 
 option possible de compression : nested (default), compact, compressed, ou expanded  
  exemple pour compresser vos fichiers scss :  
 ̀```
-sass --watch chemin_fichiers_scss chemin_fichiers_css --style compressed
+sass --watch chemin_fichiers_scss:chemin_fichiers_css --style compressed
 ̀̀```
 
 - Comparaison du code SASS / SCSS   
@@ -35,11 +35,13 @@ Vous trouverez dans ce dépot un exemple de projet SASS:
 
 Essayez les styles ci-dessous :  
 
-Tous ces fichiers SCSS seront au final réunis en un seul lors de l'éxécution de la commande sass :  
-Nous allons créer plusieurs feuilles de style partiales :  
-[Exemple de répertoire SCSS](https://github.com/MyClientisRich/WPbaseTheme/tree/master/scss)  
+Nous allons créer plusieurs partiels :  
+[Exemple de répertoire SCSS contenant des partiels](https://github.com/MyClientisRich/WPbaseTheme/tree/master/scss)  
 - Utilisation de variables :
-Créer un fichier assets/scss/variables.scss est mettre dedans :    
+```
+Créer un fichier assets/scss/_colors.scss est mettre dedans :  
+```
+Ajoutez ceci dedans  
 ```
 $fond: #222;
 $texte: #AAA;
@@ -47,7 +49,8 @@ $texte: #AAA;
 $base_color: #48A3E9;
 ```
 
-- Nesting ( traduction : Nidification?? par rapport à la structure )  
+- Nesting ( traduction : Nidification?? par rapport à la structure )
+Pour la liste de box1 :  
 ```
 ul {  
     padding: 0;
@@ -63,7 +66,11 @@ ul {
 }
 ```
 
-- Compiler et Tester vos fichiers SCSS et linkez le app.css obtenu sur votre index.html  
+Pour la liste de box2, couleur du lien en jaune et grise au survol
+
+- Compiler et Tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html pour voir le résultat.
+
+Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos classes box1, box2 et box3 pour ajouter ces propriétés automatiquement.
 
 - Inheritance ( Héritage )   
 ```
@@ -82,26 +89,3 @@ ul {
     background-color: blue;
 }
 ```
-
-Créez un héritage %box, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos autres classes pour ajouter ces propriétés.
-
-@mixin box($bg-color) {
-    background-color: $bg-color;
-    // this is a predefined sass-function
-    color: complement($bg-color);
-}
-
---
-$color: red;
-
-@mixin my-border($color) {
-  border: 1px solid $color;
-}
-
-body {
-  background: $color;
-  @include my-border(green);
-}
-
-- Les fonctions :  
-Comme Darken et Lighten() qui permettent d'assombrir ou d'éclaircir une couleur.  
