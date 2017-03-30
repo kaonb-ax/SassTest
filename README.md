@@ -32,7 +32,7 @@ sudo gem install sass
 
 ! Ne créez rien dans assets/css ! c'est la commande sass que vous avez installé plus haut qui va créer les fichiers css automatiquement pour vous à partir du code scss que vous allez mettre dans vos fichiers scss :  
 
-Tutoriels:  
+Tutoriels pour en savoir plus:  
 [https://la-cascade.io/se-lancer-dans-sass/](https://la-cascade.io/se-lancer-dans-sass/)  
 [https://www.alsacreations.com/article/lire/1717-les-preprocesseurs-css-c-est-sensass.html](https://www.alsacreations.com/article/lire/1717-les-preprocesseurs-css-c-est-sensass.html)
 
