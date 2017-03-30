@@ -27,7 +27,6 @@ sudo apt install ruby
 ```
 sudo gem install sass
 ```
-Vous trouverez dans ce dépot un exemple de projet SASS:  
 
 - Créer un répertoire assets/scss et assets/css  
 
