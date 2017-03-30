@@ -48,9 +48,23 @@ $texte: #AAA;
 
 $base_color: #48A3E9;
 ```
+- Créer un fichier assets/scss/app.scss et importez dedans le fichier colors.scss dedans grâce à:  
+```
+@import nomdufichierSeulement
+```
+Dans app.scss, affectez au body un background en utilisant la variable $fond comme couleur et comme couleur de police la variable $texte
+
+- Compiler et Tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html pour voir le résultat.
+exemple de commande:
+```
+sass --watch assets/scss/body.scss:assets/css/styles.css --trace --style compressed
+```
 
 - Nesting ( traduction : Nidification?? par rapport à la structure )
-Pour la liste de box1 :  
+```
+Créer un fichier assets/scss/_liste.scss est mettre dedans :  
+```
+Modifiez le nesting ci-dessous pour affecter à la liste .listDeux uniquement un lien blue et lime au hover :  
 ```
 ul {  
     padding: 0;
@@ -66,9 +80,7 @@ ul {
 }
 ```
 
-Pour la liste de box2, couleur du lien en jaune et grise au survol
-
-- Compiler et Tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html pour voir le résultat.
+Pareil pour la liste de box3 ( .listTrois ), couleur du lien en jaune et grise au survol.
 
 Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos classes box1, box2 et box3 pour ajouter ces propriétés automatiquement.
 
