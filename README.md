@@ -52,12 +52,12 @@ $base_color: #48A3E9;
 ```
 @import nomdufichierSeulement
 ```
-Dans app.scss, affectez au body un background en utilisant la variable $fond comme couleur et comme couleur de police la variable $texte
+Dans app.scss, affectez au body un background en lui affectant la variable $fond comme couleur et comme couleur de police la variable $texte  
 
-- Compiler et Tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html pour voir le résultat.
-exemple de commande:
+- Utilisez la commande ci-dessous pour compiler et tester vos fichiers SCSS ci-dessus et linkez le app.css obtenu sur l'index.html pour voir le résultat.
+exemple de commande, lancez la une seule fois dans le terminal, elle observera automatiquement les changements que vous faites dans les fichiers scss et re-créera automatiquement le fichier app.css:
 ```
-sass --watch assets/scss/body.scss:assets/css/styles.css --trace --style compressed
+sass --watch assets/scss/app.scss:assets/css/app.css --trace --style compressed
 ```
 
 - Nesting ( traduction : Nidification?? par rapport à la structure )
@@ -81,13 +81,17 @@ ul {
 ```
 
 Pareil pour la liste de box3 ( .listTrois ), couleur du lien en jaune et grise au survol.
+```
+importez dans app.scss le fichier _liste.scss et testez le style des listes
+```
 
 Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos classes box1, box2 et box3 pour ajouter ces propriétés automatiquement.
 
 - Inheritance ( Héritage )   
 ```
 %box {
-    margin: 2px;
+    margin: 5px;
+    padding: 5px;
     border: 1px solid black;
 }
 
@@ -100,4 +104,9 @@ Créez un héritage %box comme ci-dessous, vous pouvez l'utiliser ensuite avec l
     @extend .greenBox;
     background-color: blue;
 }
+```
+
+```
+Pour voir une utilisation avancée de SASS, regardez le contenu du fichier _headings.scss à la racine du projet, il y a des variables, boucles afin de générer des styles...  
+Déplacez le fichier _headings.scss dans assets/scss/ et importez le dans app.scss pour voir les modifications qui va ajouter à app.css
 ```
