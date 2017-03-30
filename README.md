@@ -36,9 +36,9 @@ Tutoriels pour en savoir plus:
 [https://la-cascade.io/se-lancer-dans-sass/](https://la-cascade.io/se-lancer-dans-sass/)  
 [https://www.alsacreations.com/article/lire/1717-les-preprocesseurs-css-c-est-sensass.html](https://www.alsacreations.com/article/lire/1717-les-preprocesseurs-css-c-est-sensass.html)
 
-Essayez les styles ci-dessous :  
+Essayez d'appliquer les styles ci-dessous :  
 
-Nous allons créer plusieurs partiels :  
+Nous allons créer plusieurs partiels comme dans ce dépôt:  
 [Exemple de répertoire SCSS contenant des partiels](https://github.com/MyClientisRich/WPbaseTheme/tree/master/scss)  
 - Utilisation de variables :
 ```
