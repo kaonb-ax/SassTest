@@ -73,9 +73,9 @@ sass --watch assets/scss/app.scss:assets/css/app.css --trace --style compressed
 }
 ```
 ```
-Créer un fichier assets/scss/_liste.scss est mettre dedans :  
+Créer un fichier assets/scss/_liste.scss
 ```
-Modifiez le nesting ci-dessous pour affecter à la liste .listDeux uniquement un lien blue et lime au hover :  
+Mettez et modifiez le nesting ci-dessous pour affecter à la liste .listDeux uniquement un lien blue et lime au hover :  
 ```
 ul {  
     padding: 0;
