@@ -1,0 +1,18 @@
+
+@mixin colorCH($colist, $colisthov) {
+    li {
+        a {
+            color: $colist;
+            &:hover {
+                color: $colisthov;
+            }
+        }
+    }
+}
+
+.listDeux{
+  @include colorCH(blue, lime);
+}
+.listTrois{
+  @include colorCH(yellow, grey);
+}

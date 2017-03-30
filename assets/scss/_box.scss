@@ -1,0 +1,15 @@
+%box {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.box1, .box2, .box3 {
+    @extend %box;
+    border-color: lime;
+}
+
+.greenBoxBlueBackground {
+    @extend .box1;
+    background-color: blue;
+}

@@ -1,0 +1,7 @@
+@import "colors";
+@import "liste";
+@import "box";
+body{
+  background-color: $fond;
+  color: $texte;
+}
