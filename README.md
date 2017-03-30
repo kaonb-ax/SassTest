@@ -2,17 +2,19 @@
 
 SASS([site officiel](http://sass-lang.com/guide)) est un langage de feuilles de style en cascade (CSS) qui sera compilé pour obtenir du CSS.  
 
-La syntaxe originale, nommée « syntaxe indentée », est proche de Haml. La nouvelle syntaxe se nomme « SCSS ». Elle a un formalisme proche de CSS.
-SCSS pour le format/extension qu'on utilise, vous pourrez aussi croisé des fichiers avec l'extension .sass, qui est l'ancien format(indenté).  
+Permet principalement d'utiliser des variables, permet facilement l'import de fichiers scss dans d'autres fichiers scss et  donc découper et organiser ces styles en plusieurs fichiers qui au final produiront un seul fichier.
 
-Permet principalement d'utiliser des variables, permet l'import de fichiers scss danns d'autres fichiers scss et  donc découper et organiser ces styles en plusieurs fichiers qui au final produiront un seul fichier.
-
-Le résultat pourrait également être compressé en passant une option à la ligne de commande, exemple :
+Le résultat peut également être compressé en passant une option à la ligne de commande, la plus efficace état compressed  
+option possible de compression : nested (default), compact, compressed, ou expanded  
+ exemple :  
 ̀```
-sass ..... ..... ..... --style compressed
+sass --watch chemin_fichiers_scss chemin_fichiers_css --style compressed
 ̀̀```
 
 - Comparaison du code SASS / SCSS   
+
+La syntaxe originale , nommée « syntaxe indentée », vous pourrez donc croisé des fichiers avec l'extension .sass, qui est l'ancien format. La nouvelle syntaxe se nomme « SCSS » avec l'extension .scss. Elle a un formalisme proche de CSS(avec les accolades).  
+
 La différence : l'indentation pour le SASS et les accolades pour SCSS  
 ![Sass Vs Scss Vs CSS](sass-vs-scss.png)  
 
@@ -21,7 +23,7 @@ La différence : l'indentation pour le SASS et les accolades pour SCSS
 sudo apt install ruby
 ```
 
-- Puis:
+- Puis:  
 ```
 sudo gem install sass
 ```
@@ -29,14 +31,15 @@ Vous trouverez dans ce dépot un exemple de projet SASS:
 
 - Créer un répertoire assets/scss et assets/css  
 
-Ne créez rien dans assets/css, c'est la commande sass installée plus haut qui va créer les fichiers css pour vous à partir du code scss mis dans vos fichiers scss :  
+! Ne créez rien dans assets/css ! c'est la commande sass que vous avez installé plus haut qui va créer les fichiers css automatiquement pour vous à partir du code scss que vous allez mettre dans vos fichiers scss :  
 
-Essayez: les styles ci-dessous en les ajoutant dans les différents fichiers scss rangés et nommées par thématique ainsi afin d'organiser ces CSS.  
+Essayez les styles ci-dessous :  
+
 Tous ces fichiers SCSS seront au final réunis en un seul lors de l'éxécution de la commande sass :  
 Nous allons créer plusieurs feuilles de style partiales :  
 [Exemple de répertoire SCSS](https://github.com/MyClientisRich/WPbaseTheme/tree/master/scss)  
-Créer un fichier variables.scss est mettre dedans :  
-- Utilisation de variables :  
+- Utilisation de variables :
+Créer un fichier assets/scss/variables.scss est mettre dedans :    
 ```
 $fond: #222;
 $texte: #AAA;
@@ -79,6 +82,7 @@ ul {
     background-color: blue;
 }
 ```
+
 Créez un héritage %box, vous pouvez l'utiliser ensuite avec le mot clef @extend dans vos autres classes pour ajouter ces propriétés.
 
 @mixin box($bg-color) {
